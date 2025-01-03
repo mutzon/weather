@@ -26,7 +26,7 @@ export default function App() {
   }, [coordinates]);
 
   async function fetchWeatherByCoords(coords) {
-    const weatherResponse = MeteoAPI.fetchWeatherByCoords(coords);
+    const weatherResponse = await MeteoAPI.fetchWeatherByCoords(coords);
     setWeather(weatherResponse);
   }
 
