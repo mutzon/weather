@@ -9,10 +9,16 @@ import {
 } from "expo-location";
 import { useEffect, useState } from "react";
 import { MeteoAPI } from "./api/meteo";
+import { useFonts } from "expo-font";
 
 export default function App() {
   const [coordinates, setCoordinates] = useState();
   const [weather, setWeather] = useState();
+  const [isFontLoaded] = useFonts({
+    "Alata-Regular": require("./assets/fonts/Alata-Regular.ttf"),
+  });
+
+  console.log(isFontLoaded);
 
   useEffect(() => {
     getUserCoordinates();
@@ -42,8 +48,8 @@ export default function App() {
       setCoordinates({ lat: "48.85", lng: "2.35" });
     }
   }
-  console.log(coordinates);
-  console.log(weather);
+  // console.log(coordinates);
+  // console.log(weather);
 
   return (
     <ImageBackground
@@ -53,7 +59,7 @@ export default function App() {
     >
       <SafeAreaProvider>
         <SafeAreaView style={s.container}>
-          <Home></Home>
+          {isFontLoaded && <Home />}
         </SafeAreaView>
       </SafeAreaProvider>
     </ImageBackground>
