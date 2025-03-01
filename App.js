@@ -5,7 +5,7 @@ import { ImageBackground } from "react-native";
 import backGroundImg from "./assets/background.png";
 import {
   requestForegroundPermissionsAsync,
-  getCurrentPositionAsync,
+  getCurrentPosition,
 } from "expo-location";
 import { useEffect, useState } from "react";
 import { MeteoAPI } from "./api/meteo";
