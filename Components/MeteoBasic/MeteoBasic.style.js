@@ -14,5 +14,9 @@ export const s = StyleSheet.create({
     alignItems: "baseline",
   },
   temperature: { fontSize: 150 },
-  image: { width: 50, height: 50, backgroundColor: "white" },
+  image: {
+    width: 50,
+    height: 50,
+    backgroundColor: "white",
+  },
 });
