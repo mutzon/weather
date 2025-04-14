@@ -18,7 +18,7 @@ export default function App() {
     "Alata-Regular": require("./assets/fonts/Alata-Regular.ttf"),
   });
 
-  console.log(isFontLoaded);
+  console.log("isFontLoaded " + isFontLoaded);
 
   useEffect(() => {
     getUserCoordinates();
@@ -48,8 +48,8 @@ export default function App() {
       setCoordinates({ lat: "48.85", lng: "2.35" });
     }
   }
-  // console.log(coordinates);
-  // console.log(weather);
+  console.log("coordinates " + coordinates);
+  console.log("weather " + weather);
 
   return (
     <ImageBackground
@@ -59,7 +59,7 @@ export default function App() {
     >
       <SafeAreaProvider>
         <SafeAreaView style={s.container}>
-          {isFontLoaded && <Home />}
+          {isFontLoaded && weather && <Home weather={weather} />}
         </SafeAreaView>
       </SafeAreaProvider>
     </ImageBackground>
