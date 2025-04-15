@@ -42,8 +42,8 @@ export default function App() {
       setCoordinates({ lat: "48.85", lng: "2.35" });
     }
   }
-  console.log(coordinates);
-  console.log(weather);
+  console.log("coordinates " + coordinates);
+  console.log("weather " + weather);
 
   return (
     <ImageBackground
